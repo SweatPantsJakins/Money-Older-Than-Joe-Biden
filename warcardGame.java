@@ -17,14 +17,11 @@ public class warcardGame {
     
     
     System.out.println(line);
+    deckCards();
+    dealCards();
+    dealCardscpu();
     warGamecards();
-    
-    /*Scanner reader = new Scanner(System.in);
-    
-    
-    ArrayList<String> userhand = new ArrayList<String>();
-    ArrayList<String> computerhand = new ArrayList<String>();
-    */
+   
   }
 
     
@@ -105,7 +102,7 @@ public static void dealCards(){
 
    ArrayList<String> userhand = new ArrayList<String>();
     ArrayList<String> deck = new ArrayList<String>();
-   for(int a = 0; a<deck.size(); a++){
+   for(int a = 0; a<26; a++){
      
      String checkword = deck.get(a);
      ArrayList<String> computerhand = new ArrayList<String>();
@@ -114,29 +111,11 @@ public static void dealCards(){
    }
  }
   
-  
-  
-  
-  
-  /*ArrayList<String> userhand = new ArrayList<String>();
-  ArrayList<Integer> numbers = new ArrayList<Integer>(); 
-  int numbers[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
-  for(int i = 0; i < deck.size()/2; i++)
-   // int firstnumber = numbers[i];
-  String set = deck.get(numbers);
-  
-  userhand.add(set);
-}
-*/
-
-
-
- 
- 
  public static void dealCardscpu(){
    ArrayList<String> userhand = new ArrayList<String>();
+   
     ArrayList<String> deck = new ArrayList<String>();
-   for(int a = 0; a<deck.size(); a++){
+   for(int a = 0; a<26; a++){
      
      String checkword = deck.get(a);
      ArrayList<String> computerhand = new ArrayList<String>();
@@ -151,11 +130,10 @@ public static void dealCards(){
    Random generator = new Random();
    ArrayList<String> computerhand = new ArrayList<String>();
    while(userhand.size()>0 && computerhand.size()>0){
-     //ArrayList<String> userhand = new ArrayList<String>();
      int l = generator.nextInt(userhand.size()-0);
      int p = generator.nextInt(computerhand.size()-0);
      String cardone = userhand.get(l);
-     String cardtwo = computerhand.get(p);
+     String cardtwo = computerhand.get(0);
      
      System.out.println("----------------------------------------------------------------------------------------------------------");
      System.out.println("Your : " + cardone);
@@ -169,7 +147,7 @@ public static void dealCards(){
      System.out.println("If the computer card is bigger please enter 2.");
      System.out.println("If there is a tie enter 3.");
      
-   /*  System.out.print("Enter winner: ");
+    System.out.print("Enter winner: ");
      int winner = reader.nextInt();
      
      if(winner == 1){
@@ -184,7 +162,7 @@ public static void dealCards(){
      
    }
    
-   if(userhand.size() == 0){
+  if(userhand.size() == 0){
      System.out.println("The computer has won the game.");
      System.out.println("THANKS FOR PLAYING");
      
@@ -195,7 +173,7 @@ public static void dealCards(){
      System.out.println("You have won the game!!!! :)");
      System.out.println("THANKS FOR PLAYING");
      
-     */
+     
    }
    
  
@@ -204,3 +182,5 @@ public static void dealCards(){
  
  
  }
+}
+ 
